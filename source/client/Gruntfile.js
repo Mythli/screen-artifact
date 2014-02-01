@@ -5,7 +5,7 @@
 		sass: {
 			dist: {
 				files: {
-					'build/css.css' : 'style/design.scss'
+					'build/css.css' : 'design/style/design.scss'
 				}
 			}
 		},
@@ -14,10 +14,10 @@
 			compile: {
 				options: {
 					templateFileExtensions: /\.hbs/,
-					templateBasePath: /template\//
+					templateBasePath: /design\/template\//
 				},
 				files: {
-					'build/template.js': 'template/**/*.hbs'
+					'build/template.js': 'design/template/**/*.hbs'
 				}
 			}
 		},
@@ -34,6 +34,8 @@
 			build: {
 				files: {
 					'build/Script.js': [
+						'script/application.js',
+						'script/router.js'
 					],
 					'build/compatibility.js': [
 						'script/library/html5shiv.js',
@@ -64,7 +66,7 @@
 		watch: {
 			compileHandlebars: {
 				files: [
-					'template/**/*.hbs'
+					'design/template/**/*.hbs'
 				],
 				tasks: [
 					'emberTemplates'
@@ -72,7 +74,7 @@
 			},
 			compileSaas: {
 				files: [
-					'style/**/*.scss'
+					'design/style/**/*.scss'
 				],
 				tasks: [
 					'sass'

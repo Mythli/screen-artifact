@@ -1,0 +1,182 @@
+$dark-color: #2A2B25;
+$light-color: #F5F5F5;
+$light-minor-color: #B6B6B6;
+$highlight-color: #DF5C4F;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+body {
+  margin: 0px;
+  padding: 0;
+  background-color: $dark-color;
+  font-family: 'Lato', Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  margin: 0px;
+}
+
+.logo {
+  background-image: url('../design/style/image/sa-logo.png');
+  height: 128px;
+  width: 128px;
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.light-area {
+  background-color: $light-color;
+  color: $dark-color;
+
+  a {
+    color: $dark-color;
+  }
+}
+
+.light-minor-area {
+  color: $light-minor-color;
+}
+
+.dark-area {
+  color: $light-color;
+  background-color: $dark-color;
+
+  a {
+    color: $light-color;
+  }
+
+  input[type=text] {
+    @include border-radius(4px);
+
+    padding-left: 10px;
+    color: $dark-color;
+    background-color: $light-color;
+    border: solid 1px $light-minor-color;
+  }
+}
+
+.site-menu {
+  @extend .light-area;
+
+  position: absolute;
+  width: 300px;
+  height: 100%;
+  padding: 0px 20px 0px 20px;
+
+  .tab-container {
+	.menu-tab {
+	  float: left;
+	  display: block;
+	  width: 50%;
+	  height: 50px;
+	  line-height: 50px;
+	  text-align: center;
+	  border-bottom: solid 1px $light-minor-color;
+	}
+
+	.menu-tab.active {
+      border-bottom: solid 1px $dark-color;
+	}
+  }
+}
+
+.site-container {
+  @extend .dark-area;
+
+  margin-left: 300px;
+  padding: 20px;
+
+  .menu-container {
+    @extend .cf;
+    $logo-size: 48px;
+
+	padding-top: 5px;
+
+    .logo {
+      float: left;
+      height: $logo-size;
+      width: $logo-size;
+      background-size: $logo-size;
+    }
+
+    .logo-text {
+      float: left;
+      margin-top: -5px;
+      margin-left: 10px;
+      text-transform: uppercase;
+
+      h1 {
+        font-size: 27px;
+      }
+
+      h2 {
+        font-size: 19px;
+        color: $light-minor-color;
+      }
+    }
+
+    .menu {
+      @extend .light-minor-area;
+
+      float: right;
+      margin: 24px 0px 0px 0px;
+
+      li {
+        float: left;
+        list-style: none;
+        margin-left: 10px;
+        text-transform: uppercase;
+      }
+
+      input[type=text] {
+        height: 20px;
+      }
+    }
+  }
+
+  .content-container {
+    margin-top: 75px;
+
+    h3 {
+      text-transform: uppercase;
+      color: $light-minor-color;
+      font-family: sans-serif;
+      font-size: 15px;
+    }
+  }
+}
