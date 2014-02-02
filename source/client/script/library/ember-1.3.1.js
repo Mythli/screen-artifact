@@ -34562,7 +34562,7 @@ Ember.Route = Ember.Object.extend(Ember.ActionHandler, {
   },
 
   /**
-    This hook is the entry point for router.js
+    This hook is the entry point for Router.js
 
     @private
     @method setup
@@ -34729,7 +34729,7 @@ Ember.Route = Ember.Object.extend(Ember.ActionHandler, {
 
 
   /**
-    Called when the context is changed by router.js.
+    Called when the context is changed by Router.js.
 
     @private
     @method contextDidChange

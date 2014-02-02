@@ -34,8 +34,8 @@
 			build: {
 				files: {
 					'build/Script.js': [
-						'script/application.js',
-						'script/router.js'
+						'script/App.js',
+						'script/Router.js'
 					],
 					'build/compatibility.js': [
 						'script/library/html5shiv.js',
