@@ -1,26 +1,37 @@
 <div class="site-menu">
 	<div class="tab-container">
-		<a href="#" class="menu-tab active">Categorys</a>
+		<a href="#" class="menu-tab active">Categories</a>
 		<a href="#" class="menu-tab">Account</a>
+	</div>
+
+	<div class="tab-content">
+		<div class="focus-submit">
+			{{input classNames="input" placeholder="Search"}}
+			<a class="icon go"></a>
+		</div>
 	</div>
 </div>
 <div class="site-container">
 	<div class="menu-container">
-		<div class="logo"></div>
-		<div class="logo-text">
-			<h1>Screen Artifact</h1>
-			<h2>Beautiful desktop wallpapers</h2>
-		</div>
+		{{#link-to "index" classNames="logo-container"}}
+			<div class="reverse-icon logo"></div>
+			<div class="logo-text">
+				<h1>Screen Artifact</h1>
+				<h2>Beautiful desktop wallpapers</h2>
+			</div>
+		{{/link-to}}
 		<ul class="menu">
 			<li>
-				{{input placeholder="Search"}}
+				<a href="#" class="reverse-icon refresh"></a>
+			</li>
+			<li>
+				<a href="#" class="reverse-icon customize"></a>
 			</li>
 		</ul>
 	</div>
 
 	<div class="content-container">
 		<div class="wallpaper-stack">
-			<h3>Top Wallpaper</h3>
 			<ul>
 
 			</ul>
